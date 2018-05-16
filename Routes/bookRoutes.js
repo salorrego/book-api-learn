@@ -2,7 +2,7 @@ const express = require('express');
 
 let routes = (Book) => {
   const bookRouter = express.Router();
-  const bookController = require('../Controllers/bookController')(Book);
+  const bookController = require('../controllers/bookController')(Book);
 
   bookRouter.route('/')
     .post(bookController.post)

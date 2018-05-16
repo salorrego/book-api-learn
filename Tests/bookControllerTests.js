@@ -15,11 +15,11 @@ describe('Book Controller Tests', () => {
         send: sinon.spy()
       }
 
-      const bookController = require('../Controllers/bookController')(Book);
+      const bookController = require('../controllers/bookController')(Book);
 
       bookController.post(req, res);
 
-      res.status.calledWith(400).should.equal(true, 'Bad Status' + res.status.args[0][0]);
+      res.status.calledWith(400).should.equal(true, 'Bad Status ' + res.status.args[0][0]);
       res.send.calledWith('Title is required').should.equal(true);
     });
   });
