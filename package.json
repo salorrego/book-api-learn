@@ -1,0 +1,36 @@
+{
+  "name": "express-book-api",
+  "version": "1.0.0",
+  "description": "Express understanding making a book api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salorrego/express-book-api.git"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "rest"
+  ],
+  "author": "Salomon Orrego M",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salorrego/express-book-api/issues"
+  },
+  "homepage": "https://github.com/salorrego/express-book-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "mongoose": "^5.0.16"
+  },
+  "devDependencies": {
+    "gulp-mocha": "^5.0.0",
+    "should": "^13.2.1",
+    "sinon": "^5.0.7"
+  }
+}
