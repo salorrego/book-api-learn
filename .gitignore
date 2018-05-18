@@ -81,6 +81,9 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
+# Visual Studio debug
+.vscode/
+
 # Yarn Integrity file
 .yarn-integrity
 

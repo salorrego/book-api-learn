@@ -13,7 +13,7 @@ let db;
 db = process.env.ENV === 'Test'? 
   mongoose.connect('mongodb://localhost/bookAPI_test') :
   mongoose.connect('mongodb://localhost/bookAPI');
-
+ 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -23,8 +23,8 @@ app.get('/', (req, res) => {
   res.send('Welcome to my API')
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log('Gulp is running on PORT ', port);
 });
 
-module.exports = app;
+module.exports = server;
