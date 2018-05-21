@@ -1,8 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const Book = require('./models/bookModel');
+const Book = require('./src/models/bookModel');
 const bodyParser = require('body-parser');
-const bookRouter = require('./routes/bookRoutes')(Book);
+const bookRouter = require('./src/routes/bookRoutes')(Book);
+const config = require('config');
 
 const app = express();
 
@@ -10,9 +11,7 @@ const port = process.env.PORT || 3000;
 
 let db;
 
-db = process.env.ENV === 'Test'? 
-  mongoose.connect('mongodb://localhost/bookAPI_test') :
-  mongoose.connect('mongodb://localhost/bookAPI');
+db = mongoose.connect(`${config.database.host}/${config.database.name}`);
  
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
